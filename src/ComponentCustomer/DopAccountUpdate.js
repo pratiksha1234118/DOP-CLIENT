@@ -123,7 +123,7 @@ export const DopAccountUpdate = () => {
           </div>
           <div className="form-group">
             <label for="amount" className="font-weight-bold">
-              Amount
+              AMOUNT
             </label>
             <input
              onChange={(e)=>{setData({...Data,amount:e.target.value})}}
