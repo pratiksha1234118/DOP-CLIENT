@@ -1,7 +1,9 @@
 {
-"apiAccountUpdate" : "http://dopservice-env.eba-pyxkyyq9.us-east-1.elasticbeanstalk.com/dop/agent/account",
-"apisearchAccountNo":"http://dopservice-env.eba-pyxkyyq9.us-east-1.elasticbeanstalk.com/dop/agent/accountNumber/",
-"apigetAccounts":"http://dopservice-env.eba-pyxkyyq9.us-east-1.elasticbeanstalk.com/dop/agent/accounts/",
-"apigetPages":"http://dopservice-env.eba-pyxkyyq9.us-east-1.elasticbeanstalk.com/dop/agent/accounts/pages"
-
+"apiAccountUpdate" : "http://localhost:8089/agent/account",
+"apisearchAccountNo":"http://localhost:8089/dop/agent/accountNumber/",
+"apigetAccounts":"http://localhost:8089/dop/agent/accounts/",
+"apigetPages":"http://localhost:8089/dop/agent/accounts/pages",
+"apiLoginCustomer":"http://localhost:8085/dop/login/user",
+"apiLoginOtp":"http://localhost:8085/dop/otp",
+"apiLoginAdmin":"http://localhost:8085/dop/login/admin"
 }
