@@ -4,12 +4,15 @@ import axios from 'axios'
 import swal from 'sweetalert';
 import api from './service/DopService.json'
 
+import { SessionExpriy } from './SessionExpriy';
+
 function DopViewAccounts() {
 
   const [Data, setData] = useState([])
   
 
 const searchAccountNo=(e)=>{
+  e.preventDefault()
   var accountNum=document.getElementById("searchBox").value;
 axios.get(api.apisearchAccountNo+accountNum)
 .then((res)=>{
@@ -86,7 +89,12 @@ useEffect(()=>{
 
 
     return (
+
+      sessionStorage.getItem("jwt")!==null? (
+     
         <div>
+
+          
 <nav class="navbar navbar-dark bg-dark">
   <a class="text-center navbar-brand text-white-50">Account Details</a>
   <form class="form-inline">
@@ -157,7 +165,9 @@ aslaasUpdate={map.aslaasUpdate}
   
 
  </div>
-    )
+      ):<SessionExpriy/>
+
+    ) ;
 }
 
 export default DopViewAccounts

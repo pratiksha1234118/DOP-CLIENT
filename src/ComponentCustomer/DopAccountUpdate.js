@@ -3,7 +3,8 @@ import { NavBar } from './NavBar'
 import axios from 'axios'
 import { Alert } from './Alert'
 import api from './service/DopService.json'
-
+import { CustomerLogin } from './CustomerLogin';
+import { SessionExpriy } from './SessionExpriy'
 
 export const DopAccountUpdate = () => {
 
@@ -74,6 +75,8 @@ export const DopAccountUpdate = () => {
 
 
     return (  
+     
+      sessionStorage.getItem("jwt")!==null? (
       <>
       <Alert alert={alert.alert} type={alert.type} message={alert.message}/>
         <NavBar />
@@ -123,7 +126,7 @@ export const DopAccountUpdate = () => {
           </div>
           <div className="form-group">
             <label for="amount" className="font-weight-bold">
-              AMOUNT
+              Amount
             </label>
             <input
              onChange={(e)=>{setData({...Data,amount:e.target.value})}}
@@ -152,6 +155,7 @@ export const DopAccountUpdate = () => {
         </form>
       </div>
       </> 
+      ):<SessionExpriy/>
     );
 
 }
